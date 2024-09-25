@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+
+html, body {
+    height: 100%; /* Ensure the body takes the full height of the viewport */
+    margin: 0; /* Remove default margin */
+}
+h1{
+    font-size: 40px;
+    font-weight: 800;
+    color: #000;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+    justify-content: center; /* Center align items vertically */
+    background-color: #f0f0f0; /* Light background color */
+}
+.header {
+    height: 50px;
+    margin: 25px auto; /* Center horizontally */
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-color: #87ceeb;
+    max-width: 1200px; /* Set a max width for larger screens */
+    width: 90%; /* Use a percentage width for responsiveness */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        height: 120px; /* Adjust height for smaller screens */
+        margin: 50px auto; /* Reduce margin for smaller screens */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 100px; /* Further adjust height for mobile */
+        margin: 30px auto; /* Further reduce margin */
+        padding: 7px;
+        flex-direction: column; /* Stack items vertically */
+    }
+}
+
+
+#result {
+    width: 100%; /* Full width */
+    padding: 15px; /* Padding for better spacing */
+    font-size: 18px; /* Font size for readability */
+    border: 2px solid #000; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f0f8ff; /* Light background color */
+    color: #333; /* Dark text color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Styles for when the input is focused */
+#result:focus {
+    border-color: #000; /* Darker green border on focus */
+    box-shadow: 0 0 8px rgba(72, 187, 120, 0.5); /* Glow effect */
+    outline: none; /* Remove default outline */
+}
+
+.num{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+button {
+    background-color: #87ceeb; /* Green background */
+    color: black; /* White text color */
+    border: none; /* No border */
+    padding: 20px; /* Padding for button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block for button layout */
+    font-size: 20px; /* Font size */
+    margin: 5px; /* Margins around buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background transition */
+    box-shadow: 20px 10px 20px 0px rgba(0, 0, 0, 0.19);
+}
+
+button:hover {
+    background-color: #1560bd; /* Darker green on hover */
+}
+
+button:active {
+    background-color: #023e8a; /* Even darker green when pressed */
+}
+.site-footer {
+    background-color: #f0f8ff; /* Dark background */
+    color: #000; /* White text */
+    padding: 20px 0; /* Padding for spacing */
+    text-align: center; /* Centered text */
+    position: relative; /* Allows for positioning */
+    bottom: 0; /* Sticks to the bottom */
+    width: 100%; /* Full width */
+}
+
+.footer-content {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center the content */
+}
+
+.footer-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links li {
+    display: inline; /* Inline list items */
+    margin: 0 15px; /* Spacing between links */
+}
+
+.footer-links a {
+    color: #000; /* White link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+

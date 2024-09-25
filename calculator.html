@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>A Simple Calculator Using JS</title>
+</head>
+<body>
+    <main class="main">
+        <!--Header DIv Here-->
+    <div class="header">
+        <h1>Online Calculator with Vanilla JS</h1>
+    </div>
+
+    <!--  Calculator Div Here -->
+
+    <div class="container">
+        <input type="text" id="result" disabled>
+        <div class="num">
+            <button onclick="clearResult()">CLR</button>
+            <button onclick="appendToResult('/')">/</button>
+        </div>
+        <div class="num">
+            <button onclick="appendToResult('1')">1</button>
+            <button onclick="appendToResult('2')">2</button>
+            <button onclick="appendToResult('3')">3</button>
+            <button onclick="appendToResult('+')">+</button>
+        </div>
+        <div class="num">
+            <button onclick="appendToResult('4')">4</button>
+            <button onclick="appendToResult('5')">5</button>
+            <button onclick="appendToResult('6')">6</button>
+            <button onclick="appendToResult('-')">-</button>
+        </div>
+        <div class="num">
+            <button onclick="appendToResult('7')">7</button>
+            <button onclick="appendToResult('8')">8</button>
+            <button onclick="appendToResult('9')">9</button>
+            <button onclick="appendToResult('*')">*</button>
+        </div>
+        <div class="num">
+            <button onclick="appendToResult('0')">0</button>
+            <button onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    
+    </main>
+    
+    <script>
+        function appendToResult(value) {
+            document.getElementById('result').value += value;
+        }
+    
+        function clearResult() {
+            document.getElementById('result').value = '';
+        }
+    
+        function calculateResult() {
+            const resultField = document.getElementById('result');
+            try {
+                resultField.value = eval(resultField.value);
+            } catch (error) {
+                resultField.value = 'Error';
+            }
+        }
+    </script>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Tinotenda Robini Zhakata. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="calculator.html">Back To Top</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
